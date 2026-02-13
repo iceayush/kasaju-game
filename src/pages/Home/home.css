@@ -1,0 +1,65 @@
+.home-container {
+    min-height: 100dvh; /* dynamic viewport height for iOS Safari */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff6a88, #ff99ac, #ff1e56);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.home-container h1 {
+    font-size: 6vw; /* responsive font size */
+    max-font-size: 2.5rem; /* optional max for desktops */
+    color: white;
+    margin-bottom: 20px;
+}
+
+.home-gif {
+    margin: 4vw 0;           /* responsive spacing */
+    width: 80%;              /* scales to container width */
+    max-width: 250px;        /* prevents it from being too large on desktop */
+    height: auto;
+}
+
+.home-gif img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 30, 86, 0.5);
+    display: block;
+}
+
+.home-container button {
+    padding: 3vw 6vw; /* responsive padding */
+    font-size: 4.5vw; /* responsive font size */
+    border-radius: 30px;
+    border: none;
+    background-color: white;
+    color: #ff1e56;
+    transition: 0.3s ease;
+}
+
+.home-container button:hover {
+    background-color: #ff1e56;
+    color: white;
+    transform: scale(1.05);
+}
+
+
+/* Mobile adjustments for very small screens */
+@media (max-width: 400px) {
+    .home-container h1 {
+        font-size: 7vw;
+    }
+    .home-gif {
+        width: 90%;   /* almost full width */
+        max-width: 200px;
+    }
+    .home-container button {
+        font-size: 5vw;
+        padding: 4vw 6vw;
+    }
+}

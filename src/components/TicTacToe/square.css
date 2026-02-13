@@ -1,0 +1,33 @@
+.square {
+    width: 100%; /* fills the grid cell */
+    height: 100%;
+    background-color: #ffffff; /* white square */
+    color: #ff1e56;            /* X/O color */
+    font-size: 5vw;            /* responsive font size */
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid #ff1e56;
+    transition: transform 0.1s ease, background-color 0.3s ease;
+    user-select: none; /* prevents accidental text selection on touch */
+}
+
+/* Feedback on touch devices */
+.square:active {
+    transform: scale(1.05);
+}
+
+/* Hover effect for desktop */
+.square:hover {
+    background-color: #ffe6eb;
+}
+
+/* Mobile adjustments for very small screens */
+@media (max-width: 400px) {
+    .square {
+        font-size: 6vw;
+        border-width: 1.5px;
+    }
+}

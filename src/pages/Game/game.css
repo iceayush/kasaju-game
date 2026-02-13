@@ -1,0 +1,122 @@
+.game-container {
+    min-height: 100dvh; /* fixes iOS Safari viewport issue */
+    background: linear-gradient(135deg, #ff99ac, #ff1e56);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5vw; /* responsive padding */
+    color: white;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Header */
+.game-container h2 {
+    font-size: 6vw; /* responsive font */
+    max-font-size: 1.8rem; /* optional max for desktop */
+    margin-bottom: 4vw;
+}
+
+/* Tic Tac Toe board wrapper */
+.board-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vw;
+    width: 100%;
+}
+
+/* Board grid */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 25vw);
+    grid-template-rows: repeat(3, 25vw);
+    gap: 2vw;
+    background-color: white;
+    padding: 2vw;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    max-width: 400px; /* optional for large screens */
+}
+
+/* Squares */
+.square {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    color: #ff1e56;
+    font-size: 5vw;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid #ff1e56;
+    transition: transform 0.1s ease, background-color 0.3s ease;
+}
+
+.square:hover {
+    background-color: #ffe6eb;
+    transform: scale(1.05);
+}
+
+/* Game over message */
+.game-over {
+    margin-top: 4vw;
+    text-align: center;
+    font-size: 5vw;
+    color: #ff1e56;
+}
+
+.game-over button {
+    margin-top: 2vw;
+    padding: 3vw 6vw;
+    font-size: 4.5vw;
+    border-radius: 25px;
+    border: none;
+    background-color: #ff1e56;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.game-over button:hover {
+    background-color: white;
+    color: #ff1e56;
+    transform: scale(1.05);
+}
+
+/* Door button */
+.door-button {
+    margin-top: 4vw;
+    padding: 3vw 6vw;
+    font-size: 4.5vw;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    color: #ff1e56;
+    transition: 0.3s ease;
+}
+
+.door-button:hover {
+    background-color: #ff1e56;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Mobile adjustments for small screens */
+@media (max-width: 400px) {
+    .game-container h2 {
+        font-size: 7vw;
+    }
+    .game-over {
+        font-size: 6vw;
+    }
+    .game-over button,
+    .door-button {
+        font-size: 5vw;
+        padding: 4vw 6vw;
+    }
+}

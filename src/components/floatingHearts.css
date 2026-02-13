@@ -1,0 +1,65 @@
+.hearts {
+    position: fixed; /* cover entire screen */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    overflow: visible; /* allow hearts to float off screen */
+    z-index: 0;
+}
+
+.heart {
+    position: absolute;
+    bottom: -50px;
+    background-color: #ff1e56;
+    transform: rotate(-45deg);
+    opacity: 0.8;
+    animation-name: floatHeart;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+/* Top lobes of heart */
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ff1e56;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -50%;
+    left: 0;
+}
+
+.heart::after {
+    top: 0;
+    left: 50%;
+}
+
+/* Floating animation */
+@keyframes floatHeart {
+    0% {
+        transform: translateY(0) rotate(-45deg);
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(-110vh) rotate(-45deg); /* float off screen */
+        opacity: 0;
+    }
+}
+
+/* Optional: Mobile tweaks for iPhone */
+@media (max-width: 450px) {
+    .heart {
+        width: 4vw;
+        height: 4vw;
+    }
+}

@@ -1,0 +1,108 @@
+/* Poem Page Container */
+.poem-container {
+    min-height: 100dvh; /* dynamic viewport height for iOS Safari */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, #ff1e56, #8b0000);
+    text-align: center;
+    color: white;
+    padding: 5vw; /* responsive padding */
+    position: relative;
+    overflow: visible; /* allow floating hearts */
+    z-index: 1; /* text above hearts */
+    box-sizing: border-box;
+}
+
+/* Headings & Paragraphs */
+.poem-container h1 {
+    font-size: 6vw; /* responsive */
+    max-font-size: 2.5rem; /* desktop max */
+    margin-bottom: 4vw;
+    position: relative;
+    z-index: 2;
+}
+
+.poem-container p {
+    font-size: 4.5vw; /* responsive */
+    line-height: 6vw;
+    margin-bottom: 3vw;
+    position: relative;
+    z-index: 2;
+}
+
+/* Button Container */
+.poem-buttons {
+    display: flex;
+    gap: 4vw;
+    margin-top: 5vw;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Play Again Button */
+.play-again-button {
+    padding: 3vw 6vw;
+    font-size: 4.5vw;
+    border-radius: 25px;
+    border: none;
+    background-color: #ff1e56;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.play-again-button:hover {
+    background-color: white;
+    color: #ff1e56;
+    transform: scale(1.05);
+}
+
+/* Back to Home Button */
+.home-button {
+    padding: 3vw 6vw;
+    font-size: 4.5vw;
+    border-radius: 25px;
+    border: none;
+    background-color: white;
+    color: #ff1e56;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: #ff1e56;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Floating hearts wrapper */
+.hearts {
+    position: fixed; /* cover full screen */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    overflow: visible; /* allow hearts to float off-screen */
+    z-index: 0;
+}
+
+/* Mobile adjustments */
+@media (max-width: 400px) {
+    .poem-container h1 {
+        font-size: 7vw;
+    }
+    .poem-container p {
+        font-size: 5vw;
+        line-height: 6vw;
+    }
+    .poem-buttons button {
+        font-size: 5vw;
+        padding: 4vw 6vw;
+    }
+}
