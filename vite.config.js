@@ -2,6 +2,6 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  base: '/kasaju-game/', // <--- important
+  base: '/kasaju-game/',  // <-- important for GitHub Pages
   plugins: [react()],
 });
