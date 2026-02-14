@@ -2,15 +2,42 @@
     position: fixed;
     inset: 0;
     background: black;
+    /* Use padding to keep content away from the Dynamic Island/Home bar */
+    padding: env(safe-area-inset-top) 20px env(safe-area-inset-bottom) 20px;
     display: flex;
+    flex-direction: column; /* Stack video and button */
     justify-content: center;
     align-items: center;
     z-index: 5;
+    overflow: hidden; /* Prevents accidental scrolling */
 }
 
 .surprise-video {
-    width: 90%;
-    max-width: 700px;
-    border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    width: 100%; /* Take full width on mobile */
+    max-width: 400px; /* Limits size on desktop */
+    height: auto;
+    max-height: 65vh; /* Ensure there is room for the button below */
+    object-fit: contain; /* Keeps the GIF from stretching */
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(255, 255, 255, 0.1);
+}
+
+.button-container {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Make the button easy to tap on iPhone */
+.home-button {
+    padding: 15px 40px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: #ff4d6d;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent; /* Removes the gray box on tap */
 }
