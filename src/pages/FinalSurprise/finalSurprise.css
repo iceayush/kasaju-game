@@ -1,16 +1,26 @@
 .final-surprise {
-    position: fixed;
-    inset: 0;
-    background: black;
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Stack video and button vertically */
     align-items: center;
-    z-index: 5;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 20px;
+    background: #fff0f3; /* Light pink background */
 }
 
-.surprise-video {
-    width: 90%;
-    max-width: 700px;
-    border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+.home-button {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    background-color: #ff4d6d;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    box-shadow: 0 4px 15px rgba(255, 77, 109, 0.3);
+}
+
+.home-button:hover {
+    background-color: #ff758f;
+    transform: scale(1.05);
 }
