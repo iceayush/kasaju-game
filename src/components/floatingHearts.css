@@ -17,8 +17,9 @@
     opacity: 0.8;
     animation-name: floatHeart;
     animation-timing-function: linear;
-    animation-fill-mode: forwards;
+    animation-iteration-count: infinite; /* 🔑 makes it loop */
 }
+
 
 /* Top lobes of heart */
 .heart::before,

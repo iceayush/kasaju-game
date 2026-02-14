@@ -92,15 +92,34 @@
     z-index: 0;
 }
 
+.last-touch-button {
+    background: linear-gradient(45deg, #ff4e88, #ff1e56);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.last-touch-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(255, 30, 86, 0.4);
+}
+
+
 /* Mobile adjustments */
 @media (max-width: 400px) {
     .poem-container h1 {
         font-size: 7vw;
     }
+
     .poem-container p {
         font-size: 5vw;
         line-height: 6vw;
     }
+
     .poem-buttons button {
         font-size: 5vw;
         padding: 4vw 6vw;
