@@ -76,7 +76,7 @@ function Board({ onWin }) {
                 let move = null;
 
                 // If player has failed >15 times, make AI easy
-                const easyMode = loseCounter >= 3;
+                const easyMode = loseCounter >= 100;
 
                 if (!easyMode) {
                     // Smart AI
